@@ -1,0 +1,86 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Acceuil */
+
+/*navbar top*/
+.navbar.navbar-expand-lg.navbar-dark.bg-primary {
+    height: 90px;
+
+}
+
+/*navbar bottom */
+.navbar.fixed-bottom.navbar-dark.bg-primary{
+    height: 80px;
+}
+
+/* container connexion*/
+.container-conn {
+    position: relative;
+    margin: 100px auto;
+    max-width: 400px;
+    background-color: #05101a;
+    border-radius: 25px;
+    
+}
+.card-header.login{
+    margin: auto;
+    border-radius: 25px 0 0;
+}
+
+.card-header.login h5 {
+    text-align: center;
+    color: #fff;
+}
+
+input.form-control {
+    display: block;
+    width: 50%;
+    border-radius: 25px;
+    margin: auto;
+}
+
+button.btn.btn-success.conn {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#0162c8,#55e7fc)
+}
+
+/**** Footer *****/
+
+/*container footer*/
+.container-footer{
+    position: static;
+	height: 40px;
+	margin: auto;
+	width: auto;
+}
+
+/* icon link  */
+div #link {
+	position: fixed;
+	padding-left: 50px ;
+}
+
+/* icon link color */
+.filter-green{
+	filter:  invert(100%) sepia(0%) saturate(24%) hue-rotate(114deg) brightness(108%) contrast(108%);
+}
+ /*text copyright*/
+#copyright {
+	font-size: 0.8rem;
+	color : rgb(230, 235, 243);
+	
+}
+/* copyright position*/
+div#copyright p {
+	 margin: 30px 10px 10px;
+	
+}
