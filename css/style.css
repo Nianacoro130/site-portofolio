@@ -22,7 +22,7 @@
     position: relative;
     margin: 100px auto;
     max-width: 400px;
-    background-color: #05101a;
+    background-color: #a9c6e0;
     border-radius: 25px;
     
 }
@@ -32,6 +32,7 @@
 }
 
 .card-header.login h5 {
+    font-weight: bold;
     text-align: center;
     color: #fff;
 }
@@ -51,6 +52,15 @@ button.btn.btn-success.conn {
     text-decoration: none;
     text-transform: uppercase;
     background: linear-gradient(90deg,#0162c8,#55e7fc)
+}
+
+.alert.alert-danger{
+    display: block;
+    position: static;
+    margin: 5px auto;
+    max-width:  30%;
+    text-align: center;
+    overflow: hidden; 
 }
 
 /**** Footer *****/
@@ -75,7 +85,8 @@ div #link {
 }
  /*text copyright*/
 #copyright {
-	font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
 	color : rgb(230, 235, 243);
 	
 }
