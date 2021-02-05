@@ -2,10 +2,9 @@
 session_start();
 include('librairies/bdd.php');?>
 
-<div class="loader_bg">
+<!-- <div class="loader_bg">
   <div class="loader"></div>
-</div>
-
+</div> -->
 <DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,41 +61,3 @@ include('librairies/bdd.php');?>
       </form>
     </div>
   </nav>
-  <div class = "container" id="cv">
-   <div class="description">
-    <div>
-      <h2>Développeur Web </h2>
-      <h3>HTML / CSS / Javascript / PHP /JAVA /MYSQL</h3>
-        <a href="upload/CV_Nianacoro Konare CDAP.pdf" target="_blank" class="btn btn-primary">Télécharger le CV</a>
-    </div>
-  </div>
-</div>
-
-<!-- <div class="arrow-wrapper">
-    < <div class="arrow-up"></div> -->
-    <!-- <div class="arrow-right"></div> -->
-    <!-- <div class="arrow-down"></div> -->
-    <!-- <div class="arrow-left"></div> -->
-<!-- </div> --> 
-  <nav class="navbar navbar-expand-lg fixed-bottom  navbar-dark bg-primary">
-        <div class="container-footer" id="footer">
-            <div id="link">
-                <a href="mailto:nianacorokonare@gmail.com" id="mail" class="filter-green" target="_blank"><img src="img/icon/envelope-fill.svg" alt=""></a>
-                <a href="https://github.com/Nianacoro130" id="github" class="filter-green" target="_blank"><img src="img/icon/github.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/nianacoro-konaré"  class="filter-green" id="linkedin" target="_blank"><img src="img/icon/linkedin.svg" alt=""></a>
-            </div-><!--link-->
-            <div id="copyright">
-                <p>Copyright © Nianacoro Konaré</p>
-            </div>
-        </div><!--footer-->   
-    </nav>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  setTimeout(function(){
-    $('.loader_bg').fadeToggle();
-  }, 1500);
-
-
-</script>
-</body>
-</html>
