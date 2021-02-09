@@ -334,8 +334,6 @@ description .btn.btn-primary {
 
      }
      
-    
-    
     table{
         max-width: 950px;
         margin:  100px auto;
@@ -346,6 +344,27 @@ description .btn.btn-primary {
         border-collapse:collapse;
         text-overflow: ellipsis;
     }
+
+/*** CONTAINER MODIFIER PROJET***/
+
+.container-modif {
+    display: block;  
+    flex-wrap: wrap;
+    
+    max-width:800px;
+    margin:  20px auto;
+    background-color:ffffff;
+    border-radius: 25px;
+    border-color: #0162c8;
+    border: 2px solid;
+}
+
+.card-header.modif h3 {
+    text-align: center;
+    font-weight: 200;
+    color: black;
+  }
+
 
     
 

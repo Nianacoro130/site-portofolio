@@ -16,7 +16,7 @@ if(isset($_GET['succes']))
 </div>';
 }     
 
-        echo '<div class="listeprojet"><table><label>LISTE DES PROJETS</label>';;
+        echo '<div class="listeprojet"><table><label>LISTE DES PROJETS</label>';
             echo '<tr>';
                 echo '<th class="thliste">Id</th>';
                 echo '<th class="thliste">Nom</th>';
@@ -33,14 +33,12 @@ if(isset($_GET['succes']))
                     echo '<td class="tdliste">' . $donnees['image'] . '</td>';
                     echo '<td class="tdliste2">' . $donnees['description'] . '</td>';
                     echo '<td class="tdliste">' . $donnees['date'] . '</td>';
-                    echo '<td> <a href="edit?id=<c:out value="modif">Modifier</a></td>';
+                    echo '<td> <a href="modifierunprojet.php/editer?id=' .$donnees['id'].'">Modifier</a></td>';
                     echo '<td> <a href="delete.php/supprimer?id=' .$donnees['id'] . '" value="delete">Supprimer</a></td>';
                 echo '</tr>';
                     }
         echo '</table></div>';
         $pdo = null;
-
-        
 
         $reponse->closeCursor();       
 ?>
