@@ -3,73 +3,92 @@ include('navbar.php');
 ?>
 
 <?php
-if(isset ($_GET['id']) && !empty($_GET['id'])){
+if(isset($_GET['id']) AND !empty($_GET['id'])) {
     $pdo = getPdo();
-    $modif = $pdo->query('SELECT * FROM projet where id = ' .$_GET['id']);
-    $donnes = $modif->fetch();
-
- }
-
- if(isset($_POST['enregistrer']))
- {
-    $pdo = getPdo();
-
-    $nom = $_POST['nom'];
-    $image = $_POST['image'];
-    $description = $_POST['description'];
-    $date = $_POST['date'];
+    $get_id = htmlspecialchars($_GET['id']);
   
+     $stmt = $pdo->prepare('SELECT * FROM projet WHERE id = ?');
+     $stmt->execute(array($get_id));
   
-    $query = "UPDATE `projet` SET `nom`=:nom,`image`=:image,`description`=:description,`date`=:date";
-  
-    $pdoResult = $pdo->prepare($query);
-  
-    $pdoExec = $pdoResult->execute(array(":nom"=>$nom,":image"=>$image,":description"=>$description,":date"=>$date));
-  
-     if($pdoExec)
-     {
-         echo 'MAJ OK';
-     }else{
-         echo 'Màj non prise en compte';
+         // Vérification que l'article existe bien
+         if($stmt->rowCount() == 1) {
+         $stmt = $stmt->fetch();
+         $nom = $stmt['nom'];
+         $image = $stmt['image'];
+         $description = $stmt['description'];
+         $date = $stmt['date'];
+        
+         //..
      }
+ }
+ //.. code test des erreurs $errors
+ // Mise à jour de la base de donnée
+ if (empty($errors) && isset($_POST['enregistrer'])) {
+     $pdo = getPdo();
+     $stmt = $pdo->prepare("UPDATE projet SET
+                             nom = :nom,
+                             image = :image,
+                             description = :description,
+                             date = :date
+                             WHERE id = :id");
   
+     $stmt->execute(array(
+                      'id' => $get_id,
+                     'nom' => $_POST['nom'],
+                     'image' => $_POST['image'],
+                     'description' => $_POST['description'],
+                     'date' => $_POST['date'],
+                     ));
+  
+ 
+        if($stmt)
+            {
+            // echo 'MAJ OK';
+            ?> <div class="alert alert-info">
+           <strong>Succes</strong> votre projet à  été mise à jour  ! 
+           </div><?php
+        }else{
+             echo 'Màj non prise en compte';
+             ?> <div class="alert alert-info">
+           <strong>Erreur</strong> votre projet n'a pas été mise à jour ! 
+           </div><?php
+        }
+
+                
+                        
+     // Redirection vers ma page index.php
+     // header('Location: index.php');
  }
   
- ?>
-
-       
-                <form action ="modifierunprojet.php" method="POST">
-                <div class="container-modif">
-                    <div class="card-header modif">
-                        <h3>MODIFIER UN PROJET</h3>
-                    </div>
-                <form>
-                        <div class="form-group">
-                            <label>NOM PROJET</label>
-                            <input type="text" class="form-control" name ="nom" <?php if (!empty($_GET['id'])){?> value=" <?php echo $donnes['nom'];?>"<?php };?>>
-                        <div class="form-group">
-                            <label>DATE</label>
-                            <input type="text" class="form-control" name="date" <?php if (!empty($_GET['id'])){?> value=" <?php echo $donnes['date'];?>"<?php };?>>
-                        </div>
-                        <div class="form-group">
-                            <label>URL IMAGE</label>
-                            <input type="text" class="form-control" name="image" <?php if (!empty($_GET['id'])){?> value=" <?php echo $donnes['image'];?>"<?php };?>>
-                        <div class="form-group">
-                            <label>DESCRIPTION</label>
-                            <input type="text" class="form-control" name="description" <?php if (!empty($_GET['id'])){?> value=" <?php echo $donnes['description'];?>"<?php };?>>
-                        </div>
-                    </form><br>
-                    <center><button type="submit" name="enregistrer" class= "btn btn-success">Enregistrer</center> 
-                        
-                </div>
-                </form>';
-    
-            <?php
-   
-
-//  $modif->closeCursor(); // Termine le traitement de la requête
-
 ?>
+
+        <form  method="POST">
+        <div class="container-modif">
+            <div class="card-header modif">
+                <h3>MODIFIER UN PROJET</h3>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>NOM PROJET</label>
+                    <input type="text" class="form-control" name="nom" value="<?php echo  $nom;?>">
+                </div>
+                <div class="form-group">
+                    <label>DATE</label>
+                    <input type="text" class="form-control" name="date" value="<?php echo $date;?>">
+                </div>
+                <div class="form-group">
+                    <label>URL IMAGE</label>
+                    <input type="text" class="form-control" name="image"  value="<?php echo  $image;?>">
+                </div>
+                <div class="form-group">
+                    <label>DESCRIPTION</label>
+                    <input type="text" class="form-control" name="description" value="<?php echo  $description;?>">
+                </div>
+            </form><br>
+            <center><button type="submit" name="enregistrer" class= "btn btn-success">Enregistrer</center> 
+        </div>
+        </form>
+   
          
 <br><br><br><br>
 
