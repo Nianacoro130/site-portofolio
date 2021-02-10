@@ -6,8 +6,8 @@
                 <a href="https://github.com/Nianacoro130" id="github" class="filter-green" target="_blank"><img src="img/icon/github.svg" alt=""></a>
                 <a href="https://www.linkedin.com/in/nianacoro-konaré"  class="filter-green" id="linkedin" target="_blank"><img src="img/icon/linkedin.svg" alt=""></a>
             </div-><!--link-->
-            <div id="copyright">
+        </div><!--footer-->  
+        <div id="copyright">
                 <p>Copyright © Nianacoro Konaré</p>
-            </div>
-        </div><!--footer-->   
+        </div> 
 </nav>  

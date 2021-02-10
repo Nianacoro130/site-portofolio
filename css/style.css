@@ -111,7 +111,7 @@ button.btn.btn-success.conn {
 div #link {
     position: relative;
     display: block;
-    margin-left: 100px;
+    margin-left: 65px;
     margin-right: auto;
 }
 
@@ -128,8 +128,9 @@ div #link {
 }
 /* copyright position*/
 div#copyright p {
-	 margin: 30px 10px 10px;
-	
+    position: relative;
+    font-size: medium;
+    margin: -5px auto;
 }
 
 /**** bar de chargement****/
