@@ -32,6 +32,20 @@
 	z-index: -1;
 }
 
+/*background mes projets*/
+#font {
+    background-color: #fdfdff;
+    display: block;
+	min-width: 100%;
+	min-height: 100vh;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	/* Préserve le ratio de l'image */
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
 
 /* Acceuil */
 
@@ -46,6 +60,8 @@
     position: relative;
     bottom: 0;
 } */
+
+/****container connexion ***/
     .container-conn {
         position: relative;
         margin: 100px auto;
@@ -241,6 +257,7 @@ div#copyright p {
   
 }
 
+
 .btn.btn-info{
     display: block;
     padding-left: 10px;;
@@ -268,37 +285,6 @@ description .btn.btn-primary {
 .description h3 {
 		font-size: 1.5em;
 }
-
-.arrow-up {
-    width: 32px;
-    height: 20px;
-    background-color: #8888e8;
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-  }
-  
-  .arrow-right {
-    width: 20px;
-    height: 32px;
-    background-color: #e888a3;
-    clip-path: polygon(0 0, 0 100%, 100% 50%);
-  }
-  
-  .arrow-down {
-    margin-left: auto;  
-    margin-top : -20px;
-    width: 32px;
-    height: 20px;
-    background-color: #f7df6c;
-    clip-path: polygon(100% 0, 0 0, 50% 100%);
-  }
-  
-  .arrow-left {
-    width: 20px;
-    height: 32px;
-    background-color: #8de698;
-    clip-path: polygon(100% 100%, 100% 0, 0 50%);
-  }
-  
 
 
   /*** Container ajout projet***/

@@ -20,7 +20,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
 }
 
 ?> 
-     
+<div id="font"></div>    
 <section class="detail-projet">
         <article>
             <h3><?php echo $nom;?></h3>
