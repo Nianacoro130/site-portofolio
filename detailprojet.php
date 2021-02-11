@@ -21,19 +21,22 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
 
 ?> 
      
-
-<section class="articles">
+<section class="detail-projet">
         <article>
-            <h2><?php echo $nom;?></h2>
+            <h3><?php echo $nom;?></h3>
             <div class="metadata">Ecrit le <?php echo $date->format('d/m/Y à H:i:s'); ?></div>
             <div class="content">
-                <img src="<?php echo $image; ?>" alt="">
-                <?php echo $description ;?>  
+                <img src="<?php echo $image; ?>" alt="image projet" class="img-resp">
+                <p><?php echo $description ;?><p> 
             </div>
         </article>
 </section>
 
-
+<form id="back"> 
+  <input type="button" class="btn btn-info" value="Retour" onclick="history.go(-1)">
+</form>
+   
+<br><br><br>
 <?php
 include('footer.php');
 ?>

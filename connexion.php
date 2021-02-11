@@ -29,7 +29,7 @@
         })
     </script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.php">NIANACORO KONARE</a>
+        <a class="navbar-brand" href="connexion.php">NIANACORO KONARE</a>
     </button>
     </nav>
     <div class="container-total"> 
@@ -81,7 +81,6 @@
                 <input type="hidden" name="_csrf_token" value=""/>
                     <br>
                     <center><button type="submit" class= "btn btn-success conn">Se connecter</center> 
-                
             </div>
         </form>
     </div>

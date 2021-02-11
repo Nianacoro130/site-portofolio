@@ -23,9 +23,9 @@ include('librairies/route.php');
                   $_SESSION['connect'] = $data['pseudo'];
                     header('Location: acceuil.php');
                     die();
-                }else header('Location: index.php?login_err=password');
-            }else header('Location: index.php?login_err=pseudo');
-        }else header('Location: index.php?login_err=already');
+                }else header('Location: connexion.php?login_err=password');
+            }else header('Location: connexion.php?login_err=pseudo');
+        }else header('Location: connexion.php?login_err=already');
     }
 
 ?>    

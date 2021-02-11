@@ -4,7 +4,6 @@ include('navbar.php');
 <?php
 $pdo = getPdo();
 $reponse = $pdo->query('SELECT * FROM projet' );
-// $donnees = $reponse->fetch();
 
 
 while ($donnees = $reponse->fetch()){

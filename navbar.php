@@ -1,5 +1,10 @@
 <?php
 session_start();
+if ($_SESSION['connect'] == !'admin')
+{
+ session_destroy() or die("Erreur : impossible de détruire la session" ); //destruction de la session
+ header("Location: ".$racine."connexion.php" ); 
+}
 include('librairies/bdd.php');?>
 
 <!-- <div class="loader_bg">
@@ -29,11 +34,6 @@ include('librairies/bdd.php');?>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <!--li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li-->
         <li class="nav-item">
           <a class="nav-link"><?php echo $_SESSION['connect']; ?>, est connecté !</a>
           <span class="sr-only">(current)</span>

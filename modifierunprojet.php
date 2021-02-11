@@ -21,8 +21,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
          //..
      }
  }
- //.. code test des erreurs $errors
- // Mise à jour de la base de donnée
+
  if (empty($errors) && isset($_POST['enregistrer'])) {
      $pdo = getPdo();
      $stmt = $pdo->prepare("UPDATE projet SET
