@@ -12,7 +12,6 @@ include('navbar.php');
 	   }
 	}
 	?>
-    
 	<?php if($projet->rowCount() > 0) { ?>
 	   <ul>
         <div class="alert alert-success ">
