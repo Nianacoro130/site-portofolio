@@ -254,7 +254,15 @@ div#copyright p {
     padding: 0 auto;
     color:rgb(7, 7, 7);
      /*font-size: 24px; */
+     max-width: 400px;
+     max-height: 400px;
   
+}
+
+ p.card-text  {
+    max-block-size: 50px;
+    overflow :hidden; 
+    text-overflow:ellipsis;
 }
 
 
@@ -299,7 +307,6 @@ description .btn.btn-primary {
     border-radius: 25px;
     border-color: #0162c8;
     border: 2px solid;
-
   }
 
   /*titre du container ajout*/
